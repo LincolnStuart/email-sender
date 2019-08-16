@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Message";
+}
+<form id="contact-form" method="post" asp-action="SendMail">
+    <div class="messages"></div>
+    <div class="controls">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_name">Firstname *</label>
+                    <input id="form_name" type="text" name="firstName" class="form-control" required="required">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_lastname">Lastname *</label>
+                    <input id="form_lastname" type="text" name="lastName" class="form-control" required="required">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">E-mail *</label>
+                    <input id="form_email" type="email" name="email" class="form-control" required="required">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_need">Subject *</label>
+                    <select id="form_need" name="subject" class="form-control" required="required">
+                        <option value=""></option>
+                        <option value="Hi-5">Hi-5</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="description" class="form-control" rows="4" required="required"></textarea>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Send">
+            </div>
+        </div>
+    </div>
+</form>
